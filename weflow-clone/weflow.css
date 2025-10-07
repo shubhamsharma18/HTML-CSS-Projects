@@ -12,7 +12,7 @@
   font-style: normal;
 }
 html,body{
-  min-height:100vh;
+  height:100vh;
   width:100%;
   overflow-x: hidden;
 }
@@ -28,7 +28,7 @@ html,body{
   
   width:100%;
   
-height: 100%;
+
   opacity:0.9;
   padding-bottom:60px;
 }
@@ -66,7 +66,7 @@ nav{
   width:100%;
   justify-content:center;
   
-  gap:3rem;
+  gap:6rem;
   margin-top:4rem;
  
 
@@ -75,7 +75,7 @@ nav{
  display:flex;
  flex-direction: column;
  align-items: flex-start;
- 
+ padding-top:4rem;
   width:40%;
 
 gap:10px;
@@ -85,12 +85,16 @@ gap:10px;
 }
 
 .heading{
+  
 margin-bottom:1rem;
   font-size:2rem;
   color:white;
  font-family: "Raleway", sans-serif;
 
 
+}
+.heading h1{
+  white-space:nowrap;
 }
 .para{
   margin-bottom:1rem;
@@ -109,7 +113,9 @@ margin-bottom:1rem;
   padding:10px 28px;
   border-radius:20px;
 }
-
+button:hover{
+  background-color:#1fbb0a;;
+}
 .bookbtn{
     background-color:#50c878;
 }
@@ -122,9 +128,10 @@ margin-bottom:1rem;
 }
 
 .right-side{
+  position:relative;
     display: flex;
   justify-content: center;
-  width: 40%;
+width:40%;
  
   
 }
@@ -151,45 +158,218 @@ margin-bottom:1rem;
 .imgcontainer:hover img{
    filter: grayscale(0);
    transform:scale(1.03);
-   transition:ease-in-out 1s;
+   transition:ease-in-out 0.5s;
   
 }
 .abs{
 position:absolute;
-top:55%;
-  
-left:52%;
+right:65%;
+top:50%;
+
+padding:13px 30px;
  
   display: flex;
   background-color: #50c878;
   z-index:100;
-  width:100%;
+  width:190px;
+
    text-align: center;
-}
-.box{
-  padding:8px 20px;
-  color:white;
- position:absolute;
+   color:white;
  text-align: center;
  background-color: #4b4b4b28;
  backdrop-filter: blur(20px);
- 
+}
+.box{
+  text-align: center;
+}
+
+.abs2{
+  top:70%;
+  
   
 }
 
+.abs .box{
+  display:flex;
+  
+  gap:3px;
+}
 
+.abs .box i{
+  color:rgb(1, 202, 17)
+}
+#trophy{
+  color:rgb(255, 230, 9);
+}
 
+@media (max-width:1060px){
+  .main-content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:50px;
+  }
+  .left-side{
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media(max-width:750px){
+  .abs{
+ right:50%;
+    width:140px;
+  }
 
+}
+@media(max-width:400px){
+  .abs{
+ right:40%;
 
+    width:100px;
+  }
 
-
-
-
-
-
+}
 
 @media (max-width:860px){
   .links{
     display: none;
+  }
+  .right-side{
+    width:100%;
+  }
+  .heading p{
+    white-space: nowrap;
+  }
+  .imgcontainer{
+    height:350px;
+    width:300px;
+  }
+  .left-side{
+    width:85%;
+    padding:0px 20px;
+  }
+}
+@media(max-width:540px){
+  .heading h1{
+    font-size:2.7rem;
+  }
+}
+@media(max-width:350px){
+  .heading h1{
+    font-size:2.3rem;
+    white-space: normal;
+  }
+nav{
+  padding:3px 0px;
+}
+}
+
+
+/* main-section completed 
+
+
+now start further
+
+*/
+
+
+.container{
+  width:100%;
+  min-height:100vh;
+padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+}
+.uppercontent{
+  color:#0d0d0db3;
+  text-align: center;
+  font-size: 44px;
+ 
+  padding:8rem 8rem;
+  background: linear-gradient(to top,#03f8381c,rgb(255, 255, 255));
+ 
+}
+@media(max-width:660px){
+  .uppercontent{
+    font-size:2em;
+    padding:8rem 2rem;
+  }
+ .text span{
+    white-space:normal;
+  }
+
+}
+span{
+  white-space:nowrap;
+  color:#33824d;
+}
+.lowercontent{
+
+  width:100%;
+  margin-top:4rem;
+  
+}
+.offertext{
+
+  text-align: center;
+  padding:2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap:15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.offertext span{
+  color:black;
+font-size: 50px;
+
+}
+.offertext p{
+     color:#0d0d0db3;
+}
+.boxitems{
+  margin:0 auto;
+  display:grid;
+  width:fit-content;
+  min-height:fit-content;
+ grid-template-columns: repeat(3, 1fr);
+place-items: center;
+gap:20px;
+}
+.items{
+  border-radius:20px;
+  color:#000000;
+  padding:24px 20px;
+  background-color: #f0f0f0f5;
+  
+    display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  height:140px;
+  width:250px;
+ 
+
+
+}
+.itemheading{
+  font-style: bold;
+  font-weight: 500;
+  font-size:1.3rem;
+}
+.itempara{
+   color:#0d0d0db3;
+}
+
+/* responsive box items */
+@media(max-width:960px){
+  .boxitems{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(max-width:624px){
+  .boxitems{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
